@@ -1,0 +1,1880 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+   
+    
+}
+html,body{
+    scroll-behavior: smooth;
+    font-size: 16px;
+   height: 100%;
+   max-width: 100%;
+   
+ 
+}
+
+a{
+    text-decoration: none;
+  color: black;
+}
+
+/*------------------------------------------Home page-------------------------------------------- */
+/* Header  */
+
+
+/* First header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+   background-color: #FFE4C4;
+   align-items: center;
+ 
+    width: 100%;
+    position: fixed;
+   
+top: 0;
+ z-index: 3;
+}
+
+.header{
+ 
+    padding: 10px;
+    font-size: 20px; 
+ display: flex;
+width: 100%;
+ align-items: center;
+ justify-content: space-between;
+
+
+}
+
+
+#logo_name{
+    padding-left: 10px;
+   
+   font-weight: 900;
+   font-size: x-large;
+   
+   max-width: 150px;
+
+}
+nav{
+ display: flex;
+ flex-wrap: nowrap;
+  
+    align-items: center;
+    gap: 30px;
+
+   
+}
+.nav_link{
+  padding: 10px;
+ margin: 0px 5px;
+  
+    
+   
+}
+.cart-btn{
+  background: transparent;
+  border: none;
+  display: flex;
+cursor: pointer;
+margin-right: 20px;
+position: relative;
+}
+.cart-number{
+position: absolute;
+background-color: transparent;
+top: -13px;
+border: none;
+right: -15px;
+font-size: small;
+
+
+}
+
+/* Products menu */
+.categories{
+  position: relative;
+}
+.categories:hover .category-div{
+  visibility: visible;
+}
+  .category-div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+   background-color: white;
+   width: 120px;
+   border-radius: 8px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   top:22px;
+   right: -25px;
+   visibility: hidden;
+  }
+
+.category-div a{
+ padding: 10px;
+ font-size: 16px;
+ text-align: center;
+}
+.category-div a:hover{
+  background-color: aliceblue;
+}
+
+/*  */
+ .dropbtn {
+  
+    position: relative;
+  outline: none;
+background-color: transparent;
+display: none;
+border: none;
+font-size: 13px;
+cursor: pointer;
+padding: 10px;
+background: transparent;
+width: 70px;
+
+  }
+ 
+ 
+ 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100vw;
+    top:0 ;
+    right: 0;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+   
+  }
+  
+  .dropdown-content a {
+    color: black;
+    text-align: center;
+    padding: 20px 0px;
+    font-size:large;
+    font-weight: bolder;
+  
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;} 
+/*  */
+
+/* Hero section */
+
+.top-header{
+    position: relative;
+    height: 800px;
+  
+    overflow: hidden;
+   
+   
+    background: url("https://assets-global.website-files.com/622488277ab5ee818d179d9f/649c8bbc23f051281101a3dd_web_Brittany%20Leigh%20Nichols_r1_0368.jpg") no-repeat center;
+   background-size: cover;
+  background-attachment: fixed;
+  
+
+ 
+}
+
+
+
+
+/* Le pearle heading  */
+#heading-div{
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translate(-50%,-50%);
+
+width: 100%;
+padding: 10px;
+transition: 1.5s ease;
+
+}
+
+.heading{
+
+
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+  
+
+line-height: 1.5;
+
+
+
+}
+
+.heading h1{
+    font-size: 40px;
+}
+/* jewellery quoatation 1 */
+.heading p{
+    font-size: x-large;
+    font-weight: bold;
+ 
+}
+.shop_link a{
+
+    color: white; 
+    padding: 10px;
+    font-size:x-large;
+    font-weight: bolder;
+    background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5);
+   
+}
+.shop_link a:hover{
+  text-decoration: underline;
+ 
+  
+}
+.shop_link{
+    margin-top: 20px;
+   
+    
+}
+/* Hero section End */
+
+/* Section 1 */
+
+.section_1{
+    height: auto;
+  max-width: 100%;
+/* background-color: rgb(255, 206, 171); 
+    background-color: rgba(238, 165, 109, 0.5);
+    background-color: rgba(218, 155, 107, 0.8); 
+    background-color: rgba(218, 155, 107, 0.8); 
+    background-color: rgb(198, 143, 101); 
+    background-color: rgb(192, 138, 91); 
+    background-color: rgb(249, 211, 164); */
+   
+    background-color: rgba(232, 140, 70, 0.6); 
+    display: flex;
+    
+ justify-content: center;
+padding: 30px 0;
+overflow: hidden;
+}
+section .animate-pic{
+  transition: 1.5s;
+}
+.section_1 .animate{
+  transform:translateX(-200%);
+}
+.section_1.show-animate .animate{
+  transform: translateX(0);
+}
+.section_1 .animate-pic{
+  transform:translateX(200%);
+}
+.section_1.show-animate .animate-pic{
+  transform: translateX(0);
+}
+.section1_div{
+display: flex;
+max-width:100%;
+
+justify-content: space-around;
+height: auto;
+align-items: center;
+
+/* padding: 20px; */
+}
+
+.section_1_img{
+ width: 50%;
+  
+    height: 100%;
+}
+.section_1_img img{
+    width: 100%;
+  border-radius: 10px;
+  height: 100%; 
+}
+.section1-quote{
+
+    width: 30%;
+    display: flex;
+   
+    align-items: center;
+    
+    padding: 20px;
+   position: relative;
+   
+   font-size: x-large;
+ 
+}
+.section1-quote h1{
+   
+    max-width: 100%;
+   text-align: center;
+    
+}
+
+/* Section 1 End*/
+
+/* section1 part 2 (design) */
+
+#design{
+  overflow: hidden;
+    display: flex;
+ flex-direction: column;
+    padding: 150px 0px;
+justify-content: center;
+
+background: url("https://img.freepik.com/premium-photo/women-s-jewelry-gold-chain-trendy-jewelry-silk-background_125966-3705.jpg") no-repeat center;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+.design .animate{
+  transform: scale(0.7);
+}
+.design.show-animate .animate{
+  transform: scale(1);
+}
+.classic-quote{
+display: flex;
+justify-content: center;
+margin-bottom: 100px;
+background-color: rgb(0,0,0,0.5);
+color: white;
+  font-size: xx-large;
+ 
+  font-weight: 900;
+  padding: 40px 0px;
+  text-align: center;
+
+}
+.design-div{
+   display: flex;
+margin: auto;
+  width: 1200px;
+  max-width: 100%;
+
+  
+}
+.row1{
+
+
+    display: flex;
+    flex-direction: column;
+ max-width: 100%;
+   
+    width: 100%;
+  
+}
+
+
+.firstChild{
+    display: flex;
+    width: 100%;
+  
+}
+.child{
+
+   width: 100%;
+ 
+   max-height: 100%;
+    overflow: hidden;
+/* background-color: rgb(243, 194, 134);
+
+
+background-color: rgba(238, 165, 109, 0.7);
+background-color: rgb(255, 206, 171); 
+background-color: rgba(218, 155, 107, 0.8); 
+background-color: rgb(198, 143, 101); 
+background-color: rgb(249, 211, 164);
+ */
+background-color: rgba(218, 155, 107, 0.8); 
+
+}
+
+.child img,span{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+.child span{
+    font-size: 20px;
+    font-weight: 400;
+}
+/* section1 part 2 (design) End*/ 
+
+
+/* Section2  New Arrival*/
+.product-section {
+    display: flex;
+    flex-direction: column;
+   overflow: hidden;
+    flex-wrap: wrap;
+    padding: 80px 0px;
+   
+ 
+   
+   
+    background-color: rgb(249, 211, 164);
+  
+    
+    background-color: rgb(255, 206, 171); 
+   
+    background-color: rgba(218, 155, 107, 0.8);
+    background-color: rgba(238, 165, 109, 0.7);
+    background-color: rgb(198, 143, 101,0.7); 
+    background-color: rgb(143, 78, 40);
+    background-color: #f0c591;
+}
+
+
+.product-section h1{
+text-align: center;
+font-size: 50px;
+
+}
+
+.product_container
+{
+    display: flex;
+   
+     flex-wrap: wrap;
+     justify-content: center;
+     width: 100%;
+  
+}
+
+
+
+
+.product-section{
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #f0c591;
+
+  padding: 50px 0;
+  align-items: center;
+}
+.product-section h1{
+  font-size: 40px;
+ 
+  width: 100%;
+  
+  text-align: center;
+  
+}
+
+#product-quote{
+  
+  max-width: 800px;
+  font-size: x-large;
+  padding: 15px;
+
+  text-align: center;
+}
+.product-section .animate{
+  transform:translateY(200%);
+  transition-delay: calc(0.2s*var(--i));
+  opacity: 0;
+}
+.product-section.show-animate .animate{
+  transform: translateY(0);
+  opacity: 1;
+}
+.product-section .animate-heading{
+  transform:translateX(-200%);
+
+  opacity: 0;
+}
+.product-section.show-animate .animate-heading{
+  transform: translateX(0);
+  opacity: 1;
+}
+section .animate-heading{
+  transition: 1s;
+}
+.product-div{
+  display: flex;
+
+  width: 100%;
+flex-wrap: wrap;
+justify-content: center;
+
+max-width: 1400px;
+}
+
+.product-pics{
+  border: 1px solid black;
+  position: relative;
+  width: 24%;
+  margin: 5px;
+
+
+}
+.cartBtn{
+  position: absolute;
+  right:10px;
+  top: 10px;
+  background: transparent;
+  border:none;padding: 10px;
+  border: 1px solid gray;
+  z-index: 3;
+ opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
+cursor: pointer;
+}
+
+.product-pics:hover .cartBtn{
+  opacity: 1;
+}
+
+#product-pic1{
+  width: 100%;
+ 
+  height: 100%;
+ }
+ .product-overlay{
+ 
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+background-color: #f1f1f1;
+  flex-direction: column;
+  padding: 10px 0;
+  align-items: center;
+bottom: 0;
+ }
+ 
+
+
+ #product-pic2{
+  position: absolute;
+  width: 100%;
+ left: 0; 
+ overflow: hidden;
+top: 0;
+
+  border-width: 3px;
+height: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.product-pics:hover{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5)
+}
+.product-pics:hover  #product-pic2{
+  opacity: 1;
+}
+/* End ring section */
+
+ /* Section2  New Arrival End*/
+ .cart{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+  z-index: 100;
+}
+
+.cart-active{
+right:0;
+transition: 0.5s;
+}
+
+.cart-title{
+text-align: center;
+font-size: 1.5rem;
+font-weight: 500;
+margin-bottom: 1rem;
+padding-bottom:20px ;
+border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.cart-box{
+display: grid;
+grid-template-columns: 32% 50% 18%;
+align-items: center;
+gap: 1rem;
+margin-top: 1rem;
+border-bottom: 1px solid rgba(0,0,0,0.1);
+padding-bottom: 10px;
+}
+
+.cart-img{
+width: 75px;
+height: 75px;
+object-fit: cover;
+
+}
+/*  */
+
+/* Section 3:Products */
+ 
+.Section_3 .animate{
+  transform:translateX(200%);
+  transition-delay: calc(0.2s*var(--i));
+  opacity: 0;
+}
+.Section_3.show-animate .animate{
+  transform: translateX(0);
+  opacity: 1;
+}
+.Section_3 .animate-heading{
+  transform:translateX(-200%);
+
+  opacity: 0;
+}
+.Section_3.show-animate .animate-heading{
+  transform: translateX(0);
+  opacity: 1;
+}
+.Section_3 {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px;
+    flex-wrap: wrap;
+  justify-content: center;
+  background-color: #FFE4C4;
+  background: url("https://img.freepik.com/premium-photo/gold-rings-are-laid-out-table-with-gold-band_940863-24720.jpg") no-repeat center;
+ overflow: hidden;
+ background-size: cover;
+background-attachment: fixed;
+}
+
+.category{
+  background-color: rgb(0,0,0,0.5);
+  width: 100%;
+  text-align: center;
+  padding:20px 0px;
+  color: white;
+  margin-bottom: 30px;
+}
+.category h1{
+    font-size:50px ;
+
+
+    
+}
+ .product_div{
+     display: flex;
+   height: 100%;
+     flex-wrap: wrap;
+     justify-content: center;
+     width: 100%;
+ }
+   .main_img{
+ 
+    width: 24%;
+ margin:5px;
+ height: 100%;
+    overflow: hidden;
+    position: relative;
+   
+   }
+  .section-3-a{
+  
+ display: flex;
+ height: 100%;
+    
+  }
+  /* products link */
+   .overlay{
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+    position: absolute;
+   bottom: 0;
+    left: 0;
+    line-height: 1.5;
+
+    width: 100%;
+   
+  opacity: 0;
+   color: white;
+   background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5);
+   
+    transition: 0.5s ease;
+   
+   
+   
+ 
+   }
+   .main_img:hover .overlay{
+    
+    opacity: 1;
+   }
+ 
+   div.main_img img{
+    width: 100%;
+   transition: .5s ease-in;
+   
+  
+   }
+   /* zoom pictures */
+   div.main_img img:hover{
+    
+  transform: scale(1.1) rotate(1deg);
+   } 
+   .main_img::after{
+    content: " ";
+    display: table;
+clear: both;
+   }
+ /* Section3  End*/
+
+ /* Section 4  */
+ .section_4{
+  height: auto;
+  width: 100%;
+ overflow: hidden;
+  background-color: #f0c591;
+  display: flex;
+  flex-direction: column;
+ text-align: center;
+ 
+}
+.section_4 .animate-heading{
+  transform:translateY(-200%);
+
+}
+.section_4.show-animate .animate-heading{
+  transform: translateY(0);
+}
+.section_4 .animate{
+  transform:translateY(200%);
+ 
+  opacity: 0;
+  transition: 2s;
+}
+.section_4.show-animate .animate{
+  transform: translateY(0);
+  opacity: 1;
+}
+.collection{
+ 
+  padding: 30px ;
+  font-size: 30px;
+}
+.section4-div{
+ 
+  display: flex;
+  flex-direction: column;
+ 
+
+  width:100%;
+} 
+.section4-column{
+    display: flex;
+  
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.section4-img{
+  border: 1px solid grey;
+  width: 24%;
+  max-width: 100%;
+margin:5px;
+height: 100%;
+  overflow: hidden;
+  position: relative;
+ background-color: #f1f1f1;
+ transition: 0.5s ease;
+
+ }
+
+
+.section4-img img{
+width: 100%;
+height: 100%;
+}
+
+
+
+.section4-overlay {
+  display: flex;
+  
+font-size: larger;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+
+ .section4-img:hover .Add-cartBtn{
+  visibility: visible;
+
+}
+.section4-img:hover{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5)
+  
+}
+/* Section 4 End */
+
+/* Last quote */
+.last-quote{
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  background: url("https://static.vecteezy.com/system/resources/previews/032/546/346/large_2x/jewelry-ring-in-gold-and-pearls-on-a-gold-background-gold-wedding-rings-on-the-pincushion-ai-generated-free-photo.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section .animate{
+  transition: 1s;
+}
+.last-quote .animate{
+  transform:scale(0.7);
+}
+.last-quote.show-animate .animate{
+  transform: scale(1);
+}
+.last-quote h1{
+  max-width: 750px;
+  text-align: center;
+  color: white;
+  padding: 20px;
+ font-size: 50px;
+}
+
+/* Last quote */
+ /* section 5 */
+#service{
+  opacity: 1;
+}
+ .section_5{
+overflow: hidden;
+    background-color: burlywood;
+    display: flex;
+    
+    max-width: 100%;
+    justify-content: center;
+
+
+ }
+ .section5-center{
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+    width:100%;
+    background-color: #FFE4C4;
+   
+ }
+ .section_5 .animate-Delivery{
+  transform:translateY(100%);
+  transition: 1s;
+}
+.section_5.show-animate .animate-Delivery{
+  transform: translateY(0);
+}
+.section_5 .animate-Support{
+  transform:translateY(100%);
+  transition: 1s;
+}
+.section_5.show-animate .animate-Support{
+  transform: translateY(0);
+}
+.section_5 .animate-Return{
+  transform:translateY(100%);
+  transition: 1s;
+}
+.section_5.show-animate .animate-Return{
+  transform: translateY(0);
+}
+ .section-5-divs{
+
+  height: 100%;
+   max-width: 250px;
+   max-width: 100%;
+    display: flex;
+    flex-direction: column;
+   padding: 50px;
+    align-items: center;
+  
+   height: auto;
+
+justify-content: center;
+
+margin: 30px 10px;
+
+
+ }
+ .section-5-divs i{
+    font-size: xx-large;
+ }
+ .section-5-divs i,.section-5-divs small,.section-5-divs h1{
+
+margin: 10px 0px;
+ }
+   
+ .section-5-divs i{
+    font-size: xx-large;
+ }
+ /* .section-5-divs:hover {
+ transform: scale(1.2);
+ }  */
+ /* section 5 End */
+/* Section 6 */
+.Section_6{
+  position: relative;
+  height: 400px;
+
+  overflow: hidden;
+
+ 
+
+ 
+  background: url("https://www.tasaki-global.com/pub/media/catalog/category/jewellery/jewellery_collection_line_kv_v2.jpg") no-repeat center;
+  background-size: cover;
+  /* background: url("https://img.freepik.com/free-photo/abstract-gold-chain-jewellery-presentation_23-2149599060.jpg") no-repeat center;
+  background-size: cover; */
+  
+  /* background: url("https://images.wondershare.com/virtulook/articles/background-for-jewelry-photography-6.jpg") no-repeat center; */
+  background: url("https://i8.amplience.net/i/liberty/200929-stacking-jewellery-header?fmt=auto&qlt=40&metadata=true$poieg$&w=2048&h=1024&sm=c&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}&scaleFit=poi") no-repeat center;
+  background-size: cover;
+background-attachment: fixed;
+}
+
+
+.section6-div{
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ width: 500px;
+
+}
+
+
+
+.section6-center{
+  display: flex;
+  flex-direction: column;
+padding: 30px;
+ align-items: center;
+ text-align: center;
+
+}
+.section6-center p,.section6-center h2,.section6-center .email-div{
+  margin-top: 15px;
+}
+.email-div{
+  display: flex;
+
+ width: 100%;
+  
+}
+
+#email-input{
+width: 70%;
+padding: 10px ;
+margin-right: 10px;
+background: transparent;
+
+border: none;
+border: 1px solid black;
+outline: none;
+}
+#email-input:focus{
+  border: 1px solid black;
+}
+
+#Subscribe{
+  width: 30%;
+  cursor: pointer;
+  padding: 10px;
+  background: transparent;
+border: none;
+border: 1px solid black;
+color: white;
+background-color: black;
+outline: none;
+}
+::placeholder {
+  color: black;
+
+}
+
+/* Section 6 End*/
+
+ /* footer */
+footer{
+  height: auto;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+flex-direction: column;
+height: 300px;
+background-color: black;
+}
+
+
+.footer{
+
+gap: 20px;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+flex-wrap: wrap;
+padding: 20px;
+}
+
+.footer a{
+  color: #dfa053;
+
+  padding: 10px;
+}
+
+
+.back-top {
+  font-size: large;
+
+  color: #dfa053;
+
+position: relative;
+bottom: 0;
+
+transition: 0.5s ease;
+}
+.back-top:hover{
+  bottom: 10px;
+}
+
+ .last-line{
+ border-top: 1px solid lightgray;
+  display: flex;
+
+ padding: 30px;
+
+  justify-content: space-between;
+}
+
+.last-line small{
+  color: #dfa053;
+} 
+.social-media{
+  display: flex;
+  gap: 20px;
+
+  
+}
+.social-media-links {
+  transition: 0.2s ease;
+  color: #dfa053;
+ 
+}
+.social-media a:hover{
+  font-size: large;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+ /* End footer */
+/*-------------------------------------------Home page End--------------------------------------------------- */
+
+/*-------------------------------------------Start Products  page ---------------------------------------------- */
+
+/* Hero section */
+.productsPage-HeroSection{
+  position: relative;
+  height: 400px;
+
+  overflow: hidden;
+ 
+ 
+ background-size: cover;
+background-attachment: fixed;
+
+ background-image: url("https://images.squarespace-cdn.com/content/v1/5d89ceb3d20b190d4f6864c7/1666944142857-B0X3RTT1Y9PIZQ2LZPWU/UP-TO-THE-NECK-JEWELLERY-RING-GROUP1-PROOF-%28Web%29.jpg?format=2500w"); 
+
+}
+
+
+
+
+
+#productsPage-div-heading{
+position: absolute;
+top:50%;
+left: 50%;
+
+transform: translate(-50%,-50%);
+
+width: 100%;
+padding: 10px;
+
+}
+
+.productsPage-heading{
+
+
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+
+
+line-height: 1.5;
+
+
+
+}
+#productsPage-div-heading{
+  opacity: 0;
+  transition: 1s linear;
+  transition-delay: 0.6s;
+  font-size: 25px;
+ 
+}
+
+
+.productsPage-heading p{
+ 
+  font-weight: bold;
+
+}
+/* Hero section end */
+
+
+
+/* Section 2 Quotation */
+
+.productPage-section-2{
+
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  background: url("https://www.weronika.co.uk/wp-content/uploads/2023/03/a-weathered-penny-jewellery-weronika-karczewska-product-photography-0-5-1750x1500.jpg") no-repeat center ;
+  background-size: cover;
+  
+}
+.productPage-section-2 .animate{
+  transform:scale(0.5);
+  transition: 1s;
+}
+.productPage-section-2.show-animate .animate{
+  transform: scale(1);
+}
+.productPage-quote{
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+}
+.productPage-quote p{
+text-transform: capitalize;
+font-size: 40px;
+text-align: center;
+
+margin-bottom: 10px;
+}
+#Necklaces{
+  background-color: rgb(212, 164, 109);
+}
+#OtherProducts-section{
+  background-color: rgb(212, 164, 109);
+}
+.contact{
+  display: flex;
+  
+ justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.contact a{
+  
+text-align: center;
+padding: 10px;
+width: 100px;
+}
+#productPage-callBtn{
+  background-color: black;
+  color: white;
+}
+#productPage-EmailBtn{
+background-color: #ffd4a0;
+}
+/* End Section 2 Quotation */
+
+
+/* --------------------------End Product Page---------------------------------- */
+
+/*-------------------Start Cart Page------------------------------*/
+.products-container{
+
+    max-width: 650px;
+   
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 100px;
+   
+    
+  }
+  .products-container i{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .product-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+  }
+  .product-title{
+    width: 45%;
+  }
+  .price{
+    width: 15%;
+  
+    display: flex;
+    align-items: center;
+
+  }
+  .quantity{
+    width: 30%;
+   
+    display: flex;
+    align-items: center;
+  }
+  .total{
+    width: 10%;
+    
+    display: flex;
+    align-items: center;
+  }
+  .products{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1px 0;
+  
+  }
+  /*-------------------End Cart page---------------------------- */
+
+/*-------------------Start Contact Page page---------------------------- */
+.ContactPage-HeroSection{
+ 
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.daisyjewellery.com/cdn/shop/collections/HAN_-_All_Silver_Top_Banner_1_1200x1200.jpg?v=1702910604");
+height: 50%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+#ContactPage-div-heading{
+
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #f1f1f1;
+
+
+
+}
+#ContactPage-div-heading h1{
+  font-size:45px;
+  padding: 10px 0px;
+  
+
+}
+
+.Contact-section{
+  display: flex;
+font-style: normal;
+  justify-content: center;
+  background-color: floralwhite;
+  padding: 60px 0px;
+  width: 100%;
+}
+.Contact-section-div{
+  display: flex;
+justify-content: space-around;
+  width: 60%;
+  padding: 20px;
+
+height: auto;
+}
+.form-details{
+  display: flex;
+border: 1px solid lightgrey;
+  flex-direction: column;
+ width: 40%;
+ border-radius: 10px;
+padding: 20px;
+  max-width: 100%;
+  background-color: white;
+}
+.form-details h2{
+
+ margin-bottom: 15px;
+}
+.form-details  label{
+  margin-bottom: 5px;
+ 
+}
+.form-details input{
+padding: 10px;
+outline: none;
+
+margin-bottom: 15px;
+}
+.form-details textarea{
+  outline: none;
+  padding: 10px;
+  margin-bottom: 15px;
+resize: vertical;
+}
+.form-details button{
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(39, 159, 196);
+  border: none;
+ margin: auto;
+}
+.contact-details-section{
+  display: flex;
+width: 40%;
+
+  align-items: center;
+ height: 400px;
+ justify-content: center;
+
+}
+.address-div{
+ 
+
+  display: flex;
+ 
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-details{
+  display: flex;
+
+ margin: 10px 0px;
+}
+.contact-details i{
+  font-size: 20px;
+  margin-right: 10px;
+ color: rgb(238, 207, 179);
+  padding: 5px;
+}
+
+/*-------------------End Contact page---------------------------- */
+
+/* -------------------Start Product detail page----------------- */
+.productpage-detail-section{
+
+  padding: 100px 50px 50px;
+  display: flex;
+
+ background-color: antiquewhite;
+  
+}
+.productpage-detail-section-img{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+}
+.productpage-detail-section1-img{
+  display: flex;
+  justify-content: center;
+ 
+  position: relative;
+  display: flex;
+ 
+  width: 80%;
+}
+#productpage-detail-section1-img1{
+width: 100%;
+z-index: 2;
+
+overflow: hidden;
+}
+#productpage-detail-section1-img2{
+  position: absolute;
+width: 100%;
+height: 100%;
+overflow: hidden;
+
+}
+.productpage-detail-section2-img{
+  display: flex;
+
+  justify-content: center;
+  padding: 30px 0;
+ width: 100%;
+
+}
+#productpage-detail-section2-img1Btn1,#productpage-detail-section2-img2Btn2{
+ width: 150px;
+ height: 150px;
+
+ margin: 5px;
+ 
+ cursor: pointer;
+}
+.productpage-detail-section-detail{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+ padding-left: 50px;
+  padding:  20px;
+color: rgb(70, 60, 60);
+
+}
+.Quantity-div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Quantity-div h1{
+  margin-bottom: 5px;
+  padding: 10px 0;
+}
+
+.quantity {
+  display: flex;
+ 
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+
+}
+
+.quantity button {
+
+  
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 30px;
+  height: auto;
+  text-align: center;
+background-color: transparent;
+background-color: #f1f1f1;
+padding: 10px;
+
+
+}
+
+.quantity input{
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.input-box {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Hide the number input spin buttons */
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#productDetail_page_cartBtn{
+  padding: 10px;
+  width: 70%;
+  margin: 20px 0;
+  background-color: transparent;
+  font-size: larger;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s ease;
+
+  
+}
+#productDetail_page_cartBtn:Hover{
+   color: #ddd; 
+   background-color: black;
+}
+#productDetail_page_cartBtn i{
+  color: blue;
+  margin-left: 10px;
+  
+}
+.details_description{
+  
+  border-top: 1px solid lightgray;
+  padding: 20px 0;
+}
+
+.details_description h2{
+  padding-bottom: 20px;
+}
+.details_description p{
+
+font-size: larger;
+}
+.details_description ul,.instruction-list ul{
+  padding-left: 20px;
+
+}
+.details_description li,.instruction-list li{
+  list-style-position: outside;
+
+  padding: 5px 0;
+  
+}
+
+.instruction-list h2{
+  padding: 20px 0;
+  border-top: 1px solid lightgray;
+}
+.productDetail_HeroImg_section{
+  display: flex;
+
+
+ 
+}
+.productDetail_HeroImg{
+  width: 100%;
+  position: relative;
+  background-color: aqua;
+ height: auto;
+}
+.productDetail_HeroImg img{
+  width: 100%;
+height: 100%;
+}
+.productDetail_productLink{
+ 
+
+ width: 30%;
+ display: flex;
+ flex-direction: column;
+ 
+ 
+
+ position: absolute;
+ top: 50%;
+ 
+
+ transform: translate(0%,-50%);
+
+
+padding-left: 40px;
+font-size: large;
+
+
+}
+
+.productDetail_productLink a{
+
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 15px;
+  
+ 
+}
+.productDetail_productLink a:hover{
+  text-decoration-line: underline;
+}
+
+/* -------------------End Product detail page----------------- */
+/*---------------------start checkout page----------------- */
+
+
+   @media(max-width:1024px){
+    .section1-quote{
+      width: 50%;
+    }
+    .main_img{
+        width: 48%;
+        margin:5px;
+        
+    }
+    .main_image {
+       height: 100%;
+    }
+    .New_arrival{
+        margin:5px;
+        width: 48%;
+        
+    }
+   
+    .section4-img{
+      width: 48%;
+      margin:5px;
+      
+  }
+ 
+
+   .section5-center{
+    width: 100%;
+ }
+ .footer{
+  width: 100%;
+ }
+ /* --------------------------End Home Page---------------------------------- */
+ /* --------------------------Start Product Page---------------------------------- */
+
+
+.product-pics{
+  width: 48%;
+}
+.Earing-pics{
+  width: 48%;
+}
+.Necklace-pics{
+  width: 48%;
+}
+.Braclate-pics{
+  width: 48%;
+}
+.OtherProduct-pics{
+  width: 48%;
+}
+/* --------------------------End Product Page---------------------------------- */
+/* --------------------------Start Contact Page---------------------------------- */
+.Contact-section-div{
+  width: 100%;
+}
+/* --------------------------End Contact Page---------------------------------- */
+}
+
+
+
+
+@media(max-width:768px){
+ /* --------------------------Start Home Page---------------------------------- */
+.section1-quote{
+  margin-right: 0;
+ 
+}
+
+    .top-header{
+        width: 100%;
+    }
+    .nav{
+        display: none;
+    }
+    .cart-btn{
+      display: block !important;
+    }
+    .dropbtn{
+        display:block !important;
+    }
+   
+ 
+    .footer{
+      width: 100%;
+    }
+     /* --------------------------End home Page---------------------------------- */
+    /* -------------------------Start product detail page-------------------- */
+    .productpage-detail-section{
+      flex-direction: column;
+    }
+    .productpage-detail-section-img,.productpage-detail-section-detail{
+      width: 100%;
+    }
+    .productpage-detail-section1-img{
+      width: 100%;
+    }
+   
+    /* ------------------------End product detail page---------------------- */
+   
+  
+}
+@media(max-width:550px){
+    /* --------------------------Start Home Page---------------------------------- */
+ 
+      .section_1_img{
+      width: 100%;
+      }
+    .section1_div{
+        flex-direction: column;
+     
+     } 
+.section1-quote{
+  width: 100%;
+}
+   
+    .main_image img{
+        width: 100%;
+     
+    }
+    .main_img{
+        width: 100%;
+        margin: 5px 0px;
+    }
+    .New_arrival img{
+        width: 100%;
+        
+    }
+  
+    .New_arrival{
+        width: 100%;
+        margin: 5px 0px;
+    }
+    .design-div{
+        display: flex;
+        flex-direction: column;
+     
+       
+       
+     }
+  
+  .section4-img img{
+    width: 100%;
+ 
+}
+.section4-img{
+    width: 100%;
+    margin: 5px 0px;
+}
+    
+     .section6-div{
+      width: 100%;
+     }
+     
+     .email-div{
+flex-direction: column;
+     }
+     #email-input{
+      width: 100%;
+      
+     }
+     #Subscribe{
+      width: 100%;
+      margin-top: 10px;
+     }
+     .section5-center{
+        width: 100%;
+     }
+     .last-line{
+      flex-direction: column;
+      align-items: center;
+
+     }
+   
+    
+
+     .social-media{
+      margin-top: 20px;
+     }
+      /* --------------------------End Home Page---------------------------------- */
+
+       /* -------------------------- Start Product Page---------------------------------- */
+       .product-pics{
+        width: 100%;
+      }
+    .Earing-pics{
+      width: 100%;
+    }
+    .Necklace-pics{
+      width: 100%;
+    }
+    .Braclate-pics{
+      width: 100%;
+    }
+    .OtherProduct-pics{
+      width: 100%;
+    }
+    .contact{
+      flex-direction: column;
+     
+    }
+  /* --------------------------End Product Page---------------------------------- */
+
+    /* -------------------------- Start Contact Page---------------------------------- */
+  .Contact-section-div{
+   flex-direction: column;
+  }
+  .form-details{
+    width: 100%;
+  }
+  .contact-details-section{
+    width: 100%;
+  }
+ 
+    /* --------------------------End Contact Page---------------------------------- */
+     /* -------------------------- Start Product detail  Page---------------------------------- */
+     .productpage-detail-section{
+      flex-direction: column;
+    }
+    .productpage-detail-section-img,.productpage-detail-section-detail{
+      width: 100%;
+    }
+    .productpage-detail-section1-img{
+      width: 100%;
+    }
+    #productDetail_page_cartBtn{
+      width: 100%;
+    }
+    .productDetail_productLink{
+      width: 100%;
+    }
+      /* --------------------------End Product detail  Page---------------------------------- */
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
