@@ -529,7 +529,7 @@ max-width: 1400px;
   position: relative;
   width: 24%;
   margin: 5px;
-
+  cursor: pointer;
 
 }
 .cartBtn{
