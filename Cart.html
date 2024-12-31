@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Pearle Jewellers - Shopping Cart</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://tse3.mm.bing.net/th?id=OIP.1d7TQI67pwfr0F5jqTgD1AHaGw&pid=Api&P=0&h=180"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center; /* Horizontally center content */
+        align-items: center; /* Vertically center content */
+        min-height: 100vh; /* Ensure the content takes full viewport height */
+        flex-direction: column; /* Stack content vertically */
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        margin: 30px 0;
+        border: 1px solid lightgray;
+        background-color: #f9f9f9;
+      }
+      #cart-items {
+        padding: 10px;
+        width: 100%;
+       text-align: center;
+      }
+      .cart-item {
+        border: 1px solid lightgray;
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 10px;
+      }
+      .item-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 10px;
+      }
+      .item-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 10px;
+      }
+      #quantity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .quantity-btn {
+        cursor: pointer;
+        background-color: #f0f0f0;
+        border: none;
+        padding: 5px 10px;
+        margin: 0 5px;
+      }
+      .remove-btn {
+        cursor: pointer;
+        background-color: rgb(255, 198, 112);
+        border: none;
+        padding: 5px 10px;
+        margin: 0 5px;
+        border-radius: 20px;
+      }
+      #total-price {
+        margin-top: 10px;
+      }
+      #checkout-btn {
+        cursor: pointer;
+        background-color: rgb(255, 198, 112);
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 30px;
+      }
+      #empty {
+        text-align: center;
+        margin-top: 10px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <p id="total-price"></p>
+    <button id="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+
+    <script>
+      // Function to handle checkout button click
+      function checkout() {
+        alert("Thank you for shopping with us!");
+        document.getElementById("cart-items").innerHTML = "<p>Your cart is empty</p>";
+        document.getElementById("total-price").textContent = "Total: £0.00";
+        localStorage.removeItem("cart");
+        document.getElementById("checkout-btn").style.display = "none";
+        document.getElementById("empty").style.display = "block";
+        
+        
+        
+      }
+      // Function to render the cart items
+      function renderCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartContainer = document.getElementById("cart-items");
+        const totalPriceContainer = document.getElementById("total-price");
+        cartContainer.innerHTML = ""; // Clear previous content
+
+        if (cart.length === 0) {
+          cartContainer.innerHTML = "<p id='empty'>Your cart is empty</p>";
+          totalPriceContainer.textContent = "Total: £0.00";
+        } else {
+          let total = 0;
+
+          cart.forEach((item) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("cart-item");
+            itemDiv.innerHTML = `
+            <div class="item-details">
+                <img src="${item.image}" alt="${item.name}" style="width: 70px;">
+                <p id="item_name">${item.name}</p>
+            </div>
+             <div class="item-price">
+                
+                    <div class="quantity">
+                        <button class="quantity-btn" data-id="${item.id}" data-action="decrease">-</button>
+                        <span id="quantity-${item.id}">${item.quantity}</span>
+                        <button class="quantity-btn" data-id="${item.id}" data-action="increase">+</button>
+                        <button class="remove-btn" data-id="${item.id}">Remove</button>
+                    </div>
+                     <p>£ ${item.price * item.quantity}</p>
+            </div>
+                   
+                   
+                `;
+            cartContainer.appendChild(itemDiv);
+
+            // Update total price
+            total += item.price * item.quantity;
+          });
+
+          // Display total price
+          totalPriceContainer.textContent = `Total: £ ${total.toFixed(2)}`;
+
+          // Reattach event listeners for quantity and remove buttons
+          attachEventListeners();
+        }
+      }
+
+      // Function to handle quantity changes
+      function changeQuantity(event) {
+        const button = event.target;
+        const productId = button.getAttribute("data-id");
+        const action = button.getAttribute("data-action");
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const itemIndex = cart.findIndex((item) => item.id === productId);
+
+        if (itemIndex !== -1) {
+          if (action === "increase") {
+            cart[itemIndex].quantity += 1;
+          } else if (action === "decrease" && cart[itemIndex].quantity > 1) {
+            cart[itemIndex].quantity -= 1;
+          }
+
+          // Save the updated cart to localStorage
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          // Update the displayed quantity for the item
+          document.getElementById(
+            `quantity-${productId}`
+          ).textContent = `Quantity: ${cart[itemIndex].quantity}`;
+
+          // Re-render the cart to update the total value
+          renderCart();
+        }
+      }
+
+      // Function to remove item from the cart
+      function removeItemFromCart(event) {
+        const button = event.target;
+        const productId = button.getAttribute("data-id");
+
+        // Remove the item from the cart
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart = cart.filter((item) => item.id !== productId);
+
+        // Save updated cart to localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Re-render the cart items and total price
+        renderCart();
+      }
+
+      // Function to attach event listeners for quantity and remove buttons
+      function attachEventListeners() {
+        // Event listener for quantity buttons (+ and -)
+        const quantityButtons = document.querySelectorAll(".quantity-btn");
+        quantityButtons.forEach((button) => {
+          button.addEventListener("click", changeQuantity);
+        });
+
+        // Event listener for remove buttons
+        const removeButtons = document.querySelectorAll(".remove-btn");
+        removeButtons.forEach((button) => {
+          button.addEventListener("click", removeItemFromCart);
+        });
+      }
+
+      // Initialize the cart and attach event listeners when the page is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        renderCart();
+      });
+    </script>
+  </body>
+</html>
